@@ -1,0 +1,14 @@
+zerops:
+  - setup: app
+    build:
+      base: ubuntu@22.04
+      buildCommands:
+        - docker build -t job-hunter-app .
+      deployFiles:
+        - ./
+    run:
+      base: docker@latest
+      ports:
+        - port: 8000
+          http: true
+      start: uvicorn main:app --host 0.0.0.0 --port 8000
