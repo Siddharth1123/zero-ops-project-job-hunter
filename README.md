@@ -25,7 +25,7 @@
 Instead of wasting hours manually searching job boards, **JobHunter AI** automatically collects job postings across multiple engines and 150+ direct company career pages, scores each job against your target role profile, generates personalized recruiter outreach DMs, and delivers a curated digest to your inbox every morning at 9:00 AM.
 
 <div align="center">
-<img src="./assets/dashboard-preview.png" alt="JobHunter AI Dashboard" width="90%">
+
 
 <sub>Live dashboard — 116 jobs scraped, scored, and sorted by India-friendliness in real time.</sub>
 </div>
