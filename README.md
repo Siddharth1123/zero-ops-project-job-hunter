@@ -30,6 +30,8 @@ Instead of wasting hours manually searching job boards, **JobHunter AI** automat
 <sub>Live dashboard — 116 jobs scraped, scored, and sorted by India-friendliness in real time.</sub>
 </div>
 
+<img width="1724" height="960" alt="image" src="https://github.com/user-attachments/assets/17ac94b0-57f3-446a-8bd5-fa70f7f8816c" />
+
 ---
 
 ## ⚡ Complete End-to-End Workflow
