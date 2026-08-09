@@ -1,13 +1,7 @@
 zerops:
   - setup: docker
-    build:
-      base: alpine/docker@26.1.5
-      buildCommands:
-        - docker build -t job-hunter-app .
-      deployFiles:
-        - ./
     run:
-      base: alpine/docker@26.1.5
+      base: docker@26.1.5
       prepareCommands:
         - docker build -t job-hunter-app .
       start: docker run --network=host job-hunter-app
