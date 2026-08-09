@@ -1,9 +1,13 @@
 zerops:
   - setup: docker
+    build:
+      base: ubuntu@22.04
+      deployFiles:
+        - ./
     run:
       base: docker@26.1.5
       prepareCommands:
-        - docker build -t job-hunter-app .
+        - cd /var/www && docker build -t job-hunter-app .
       start: docker run --network=host job-hunter-app
       ports:
         - port: 8000
