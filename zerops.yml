@@ -1,14 +1,14 @@
 zerops:
-  - setup: docker
+  - setup: app
     build:
-      base: ubuntu@22.04
+      base: python@3.11
+      buildCommands:
+        - pip install -r requirements.txt
       deployFiles:
         - ./
     run:
-      base: docker@26.1.5
-      prepareCommands:
-        - cd /var/www && docker build -t job-hunter-app .
-      start: docker run --network=host job-hunter-app
+      base: python@3.11
       ports:
         - port: 8000
           httpSupport: true
+      start: uvicorn main:app --host 0.0.0.0 --port 8000
