@@ -1,14 +1,16 @@
 zerops:
-  - setup: app
+  - setup: docker
     build:
-      base: ubuntu@22.04
+      base: alpine/docker@26.1.5
       buildCommands:
         - docker build -t job-hunter-app .
       deployFiles:
         - ./
     run:
-      base: docker@latest
+      base: alpine/docker@26.1.5
+      prepareCommands:
+        - docker build -t job-hunter-app .
+      start: docker run --network=host job-hunter-app
       ports:
         - port: 8000
-          http: true
-      start: uvicorn main:app --host 0.0.0.0 --port 8000
+          httpSupport: true
